@@ -19,6 +19,8 @@ const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const cors = require("cors");
 
+process.setMaxListeners(15);
+
 dbConnect();
 app.use(morgan("dev"));
 app.use(cors());
